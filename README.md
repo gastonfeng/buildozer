@@ -72,6 +72,12 @@ A Dockerfile is available to use buildozer through a Docker environment.
       docker run --volume "$(pwd)":/home/user/hostcwd buildozer --version
 
 
+### Example Build with Caching
+- Build and keep downloaded SDK and NDK in `~/.buildozer` directory: 
+
+      docker run -v $HOME/.buildozer:/home/user/.buildozer -v $(pwd):/home/user/hostcwd kivy/buildozer android debug
+
+
 ## Buildozer GitHub action
 
 Use [ArtemSBulgakov/buildozer-action@v1](https://github.com/ArtemSBulgakov/buildozer-action)
@@ -160,17 +166,12 @@ config, along with the environment variables that would override them.
 
 ## Support
 
-If you need assistance, you can ask for help on our mailing list:
+If you need help, please feel free to seek assistance through our support channels:
 
-* User Group : https://groups.google.com/group/kivy-users
-* Email      : kivy-users@googlegroups.com
+Join the  [Kivy Users Google Group](https://groups.google.com/group/kivy-users).
+Participate in discussions on [Discord](https://chat.kivy.org).
 
-Discord channel:
-
-Server : https://chat.kivy.org
-Channel : #support
-
-For [debugging on Android](https://python-for-android.readthedocs.io/en/stable/troubleshooting/?highlight=adb#debugging-on-android), don't hesitate to use ADB to get logs of your application.
+Additionally, for troubleshooting Android-related issues, you can utilize ADB to obtain logs for your application. Detailed instructions can be found in the [debugging on Android](https://python-for-android.readthedocs.io/en/latest/troubleshooting/?highlight=adb#debugging-on-android) documentation.
 
 
 ## Contributing
@@ -188,8 +189,7 @@ discussions about developing the Kivy framework and its sister projects:
 We also have a Discord channel:
 
 * Server     : https://chat.kivy.org
-* Channel    : #support
-
+* Channel    : #dev
 
 ## License
 

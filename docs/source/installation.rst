@@ -2,7 +2,8 @@
 Installation
 ============
 
-Buildozer itself doesn't depend on any library Python >= 3.3.
+Buildozer is tested on Python 3.8 and above but may work on
+earlier versions, back to Python 3.3.
 Depending the platform you want to target, you might need more tools installed.
 Buildozer tries to give you hints or tries to install few things for
 you, but it doesn't cover every situation.
@@ -23,7 +24,7 @@ Android on Ubuntu 20.04 and 22.04 (64bit)
 
     sudo apt update
     sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
-    pip3 install --user --upgrade Cython==0.29.19 virtualenv  # the --user should be removed if you do this in a venv
+    pip3 install --user --upgrade Cython==0.29.33 virtualenv  # the --user should be removed if you do this in a venv
 
     # add the following line at the end of your ~/.bashrc file
     export PATH=$PATH:~/.local/bin/
@@ -61,13 +62,7 @@ Android on macOS
 
 ::
 
-    brew install openssl
-    sudo ln -sfn /usr/local/opt/openssl /usr/local/ssl
-    brew install pkg-config autoconf automake
-    python3 -m pip install --user --upgrade Cython==0.29.19 virtualenv  # the --user should be removed if you do this in a venv
-
-    # add the following line at the end of your `~/.bashrc` file
-    export PATH=$PATH:~/Library/Python/3.7/bin
+    python3 -m pip install --user --upgrade Cython==0.29.33 virtualenv  # the --user should be removed if you do this in a venv
 
 
 TroubleShooting
