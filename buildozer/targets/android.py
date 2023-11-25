@@ -291,7 +291,8 @@ class TargetAndroid(Target):
             # Check for C header <zlib.h>.
             is_debian_like = which("dpkg") is not None
             if is_debian_like and \
-                    not (self.buildozer.file_exists('/usr/include/zlib.h') or self.buildozer.file_exists('/opt/local/include/zlib.h')):
+                    not (buildops.file_exists('/usr/include/zlib.h') or buildops.file_exists(
+                        '/opt/local/include/zlib.h')):
                 raise BuildozerException(
                     'zlib headers must be installed, '
                     'run: sudo apt-get install zlib1g-dev')
